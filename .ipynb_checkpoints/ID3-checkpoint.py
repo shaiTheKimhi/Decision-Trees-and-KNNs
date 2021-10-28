@@ -147,7 +147,7 @@ def test(tree, attributes, classifications):
 
 
 def load(file_name):
-    file = open('./data/' + file_name, 'r')
+    file = open('data/' + file_name, 'r')
     lines = file.readlines()[1:]
     file.close()
     parts = [line.replace('\n', '').split(',') for line in lines]

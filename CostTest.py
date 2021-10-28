@@ -23,9 +23,11 @@ if __name__ == '__main__':
     ct.fit(attr, c)
 
     atest, ctest = load('test.csv')
-    print(f'Basic:{test_cost(t, atest, ctest)}')
-
-    print(f'Improved:{test_cost(ct, atest, ctest)}')
+    old = test_cost(t, atest, ctest)
+    print(f'Basic:{old}')
+    newcost = test_cost(ct, atest, ctest)
+    print(f'Improved:{newcost}')
+    print(f'improved by {old/newcost} times')
     '''
     for m in range(2, 15):
         ct = CostTree()
